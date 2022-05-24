@@ -20,13 +20,13 @@ export const averageOfNumbers = function (
 }
 
 export const squareRoot = function (
-  numberInput: number
+  number: number
 ) {
   let x: number
   let y = 5 as number
 
   for(let i = 0; i < 20; i++) {
-    x = numberInput / y;
+    x = number / y;
     y = averageOfNumbers([x, y]);
   }
 
