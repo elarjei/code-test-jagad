@@ -37,7 +37,7 @@ const factorial = function (
 const reverseDynamicData = function (
   dynamicData: any
 ) {
-  const string = dynamicData.toString() as string
+  const string = `${dynamicData}` as string
   let reversedString = '' as string
   let totalWords = string.length - 1 as number
 
