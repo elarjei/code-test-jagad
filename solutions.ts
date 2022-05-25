@@ -61,26 +61,23 @@ const testDynamicDataList: any[] = [
   'Jagad G. Anjoyo Sudiro'
 ];
 
-console.log('\nisPrimeNumber\n')
+console.log(`\n-> isPrimeNumber\n`)
 testNumberList.forEach(number => {
   console.log(
-    'Data', number,
-    'Result is', isPrimeNumber(number)
+    `Data ${number} \nResult is ${isPrimeNumber(number)}\n`
   )
 });
 
-console.log('\nfactorial\n')
+console.log(`\n-> factorial\n`)
 testNumberList.forEach(number => {
   console.log(
-    'Data', number,
-    'Result is', factorial(number)
+    `Data ${number} \nResult is ${factorial(number)}\n`
   )
 });
 
-console.log('\nreverseDynamicData\n')
+console.log(`\n-> reverseDynamicData\n`)
 testDynamicDataList.forEach(dynamicData => {
   console.log(
-    'Data', dynamicData,
-    'Result is', reverseDynamicData(dynamicData)
+    `Data ${dynamicData} \nResult is ${reverseDynamicData(dynamicData)}\n`
   )
 });
