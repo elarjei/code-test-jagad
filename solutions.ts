@@ -3,6 +3,51 @@ import {
   squareRoot,
 } from './helpers'
 
+const findBiggestNumber = function(
+  number: Array<number>,
+) {
+    let biggestNumber = 0;
+    let i: number = number.length;
+    let counter: number;
+
+    for (counter = 0; counter < i; counter++) {
+      if (number[counter] > biggestNumber) {
+        biggestNumber = number[counter];
+      }
+    }
+
+    return biggestNumber;
+}
+
+const countCharacterOccurence = function(
+  text: string,
+  textToCount: string,
+) {
+  let occurence: number;
+  let textUpperCase = text.toLocaleUpperCase();
+  let targetUpperCase = textToCount.toLocaleUpperCase();
+  occurence = textUpperCase.split(targetUpperCase).length -1;
+
+  return occurence;
+}
+
+const trianglePatternStars = function (
+  amountOfStars: number,
+) {
+    let string: string = '';
+    for (let i = 1; i <= amountOfStars; i++) {
+      for (let j = 0; j < amountOfStars - i; j++) {
+        string += ' ';
+      }
+      for (let k = 0; k < i; k++) {
+        string += '*';
+      }
+      string += '\n';
+    }
+
+    return string;
+}
+
 const isPrimeNumber = function (
   number: number
 ) {
@@ -49,7 +94,7 @@ const reverseDynamicData = function (
 }
 
 const testNumberList: number[] = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 41, 2137
+  1, 3, 7, 8, 9, 41, 2137
 ];
 
 const testDynamicDataList: any[] = [
@@ -81,3 +126,24 @@ testDynamicDataList.forEach(dynamicData => {
     `Data ${dynamicData} \nResult is ${reverseDynamicData(dynamicData)}\n`
   )
 });
+
+console.log(`\n-> trianglePatternStars\n`)
+const amountOfStars: number = 10;
+console.log(
+  `Data ${amountOfStars} \nResult is \n${trianglePatternStars(amountOfStars)}\n`
+);
+
+console.log(`\n-> countCharacterOccurence\n`)
+const text: string = 'IFS Solusi Integrasi, PT';
+const target: string = 'i'
+console.log(
+  `Data ${text} & ${target} \nResult is ${countCharacterOccurence(text, target)}\n`
+);
+
+const testNumber: number[] = [
+  8, 20, 50, 33, 89, 35, 23, 90, 101, 77, 23
+];
+console.log(`\n-> findBiggestNumber\n`)
+console.log(
+    `Data ${testNumber} \nResult is ${findBiggestNumber(testNumber)}\n`
+);
