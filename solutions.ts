@@ -49,10 +49,10 @@ const trianglePatternStars = function (
 }
 
 const isPrimeNumber = function (
-  number: number
+  number: number,
 ) {
-  const inputSquareRoot = squareRoot(number) as number
-  let numberComparator = 2 as number
+  const inputSquareRoot: number = squareRoot(number)
+  let numberComparator: number = 2;
 
   for(
     { numberComparator, inputSquareRoot };
@@ -60,31 +60,31 @@ const isPrimeNumber = function (
     numberComparator++
   ) {
     if(isMultipleOfNumber(number, numberComparator)) {
-      return false
+      return false;
     }
   }
 
-  return number > 1
+  return number > 1;
 }
 
 const factorial = function (
-  number: number
+  number: number,
 ) {
-  let result = 1 as number;
+  let result: number = 1;
 
-  for(let i = 2; i <= number; i++) {
-    result = result * i
+  for(let i: number = 2; i <= number; i++) {
+    result = result * i;
   }
 
   return result;
 }
 
 const reverseDynamicData = function (
-  dynamicData: any
+  dynamicData: any,
 ) {
-  const string = `${dynamicData}` as string
-  let reversedString = '' as string
-  let totalWords = string.length - 1 as number
+  const string: string = `${dynamicData}`;
+  let reversedString: string = '';
+  let totalWords: number = string.length - 1;
 
   for(totalWords; totalWords >= 0; totalWords--) {
     reversedString += string[totalWords];
@@ -94,7 +94,7 @@ const reverseDynamicData = function (
 }
 
 const testNumberList: number[] = [
-  1, 3, 7, 8, 9, 41, 2137
+  1, 3, 7, 8, 9, 41, 2137,
 ];
 
 const testDynamicDataList: any[] = [
@@ -103,7 +103,7 @@ const testDynamicDataList: any[] = [
   'jagad',
   'Amet cillum dolore nisi occaecat culpa laboris.',
   'Sunt ea commodo labore culpa sit commodo duis deserunt dolore pariatur reprehenderit mollit occaecat. Reprehenderit amet labore id minim culpa exercitation cillum laborum dolor minim id anim amet. Ipsum culpa sint deserunt officia cillum in et elit ea in ut nostrud. Laborum adipisicing proident eiusmod consequat dolor exercitation tempor laboris enim sit eiusmod excepteur voluptate. Occaecat ipsum incididunt sit duis nostrud.',
-  'Jagad G. Anjoyo Sudiro'
+  'Jagad G. Anjoyo Sudiro',
 ];
 
 console.log(`\n-> isPrimeNumber\n`)

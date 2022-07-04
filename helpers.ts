@@ -1,31 +1,31 @@
 export const sumOfNumbers = function (
-  numberList: number[]
+  numberList: number[],
 ) {
-  let sumNumbers = 0 as number
+  let sumNumbers: number = 0;
 
   for(let i = 0; i < numberList.length; i++) {
     sumNumbers += numberList[i];
   }
 
-  return  sumNumbers
+  return  sumNumbers;
 }
 
 export const averageOfNumbers = function (
-  numberList: number[]
+  numberList: number[],
 ) {
-  const sumNumbers = sumOfNumbers(numberList) as number
-  const totalNumbers = numberList.length as number
+  const sumNumbers: number = sumOfNumbers(numberList);
+  const totalNumbers: number = numberList.length;
 
-  return  sumNumbers / totalNumbers
+  return  sumNumbers / totalNumbers;
 }
 
 export const squareRoot = function (
-  number: number
+  number: number,
 ) {
-  let x: number
-  let y = 5 as number
+  let x: number;
+  let y: number = 5;
 
-  for(let i = 0; i < 20; i++) {
+  for(let i: number = 0; i < 20; i++) {
     x = number / y;
     y = averageOfNumbers([x, y]);
   }
@@ -35,7 +35,7 @@ export const squareRoot = function (
 
 export const isMultipleOfNumber = function (
   number: number,
-  numberComparator: number
+  numberComparator: number,
 ) {
-  return number % numberComparator === 0
+  return number % numberComparator === 0;
 }
