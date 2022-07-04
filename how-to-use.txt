@@ -1,9 +1,0 @@
-how to use
-- install node
-- npm install -g typescript
-- npm install -g ts-node typescript '@types/node'
-- ts-node solutions.ts
-
-additional
-- npm install bignumber.js --save
-- npm install @types/bignumber.js --save

@@ -1,4 +1,0 @@
-.ts or .dart preferable
-- done isPrimeNumber
-- done factorial
-- done reverseDynamicData
